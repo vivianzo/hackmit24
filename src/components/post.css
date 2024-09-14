@@ -1,3 +1,12 @@
+/* Add styles to center the post-container */
+body, html {
+    height: 50%; /* Ensure the body and HTML take up the full height */
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
 .post-container {
     width: 25rem;
     border-radius: 1rem;
@@ -10,17 +19,23 @@
 
 }
 
-.post-title, .post-text {
+.post-title {
+    margin: 0.5rem 5%;
+    font-size: 1.5rem;
+}
+
+.post-text {
     margin: 0.5rem 5%;
 }
 
 .post-btn {
     text-align: center;
-    width: 90%;
-    border-radius: 5px;
+    width: 30%;
+    border-radius: 3px;
     padding: 0.5rem 1rem;
     background-color: rgb(160, 142, 255);
     color: white;
     text-decoration: none;
     margin: 0.5rem;
+    font-size: 0.6rem;
 }

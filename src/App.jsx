@@ -1,12 +1,10 @@
 import React from 'react';
-import Sidebar from "./Sidebar"
 import Post from './components/post';
 
 function App() {
     return (
       <div className="flex">
-        <Sidebar />
-        <Post />
+        <Post title = "Wheel chair for sale" text = "I have a wheel chair available to be picked up at a discounted price!"/>
       </div>
     );
   }
