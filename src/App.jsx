@@ -1,5 +1,14 @@
+import React from 'react';
+import Sidebar from "./Sidebar"
+import Post from './components/post';
 
 function App() {
-}
-
-export default App
+    return (
+      <div className="flex">
+        <Sidebar />
+        <Post />
+      </div>
+    );
+  }
+  
+  export default App;
