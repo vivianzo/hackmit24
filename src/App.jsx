@@ -4,6 +4,7 @@ import Post from "./components/post";
 import AboutUsPage from "./AboutUsPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Response from "./Response";
+import SearchBar from "./components/searchbar";
 
 function App() {
   return (
@@ -13,14 +14,20 @@ function App() {
           <Route
             path="/"
             element={
-              <div className="flex bg-purple-100 h-screen">
+              <div className="flex h-screen bg-purple-100">
                 <Sidebar />
-                <div className="flex-grow ml-64 flex justify-center">
-                  <Post />
+                <div className="flex-grow ml-64 flex flex-col items-center pt-10 p-6 relative">
+                  <div className="w-full max-w-4xl">
+                    <SearchBar />
+                    <Post
+                      title="Wheelchair for sale"
+                      text="I am selling a wheelchair at discount! Please contact me for more details!"
+                    />
+                  </div>
                 </div>
               </div>
             }
-          ></Route>
+          />
           <Route
             path="/about"
             element={
@@ -32,12 +39,7 @@ function App() {
               </div>
             }
           />
-          <Route
-            path="/response-page"
-            element={
-                <Response />
-            }
-          />
+          <Route path="/response-page" element={<Response />} />
         </Routes>
       </div>
     </Router>
