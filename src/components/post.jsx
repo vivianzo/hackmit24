@@ -6,6 +6,8 @@ const post = ({
   text
 }
 ) => {
+  
+
   return (
     <div className= "post-container">
       <h2 className= "post-title">{title}</h2>
