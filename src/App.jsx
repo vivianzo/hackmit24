@@ -1,14 +1,28 @@
-import React from 'react';
-import Sidebar from "./Sidebar"
-import Post from './components/post';
+import React from "react";
+import Sidebar from "./Sidebar";
+import Post from "./components/post";
+import AboutUsPage from "./AboutUsPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-    return (
-      <div className="flex">
-        <Sidebar />
-        <Post />
+  return (
+    <Router>
+      <div className="">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="flex">
+                <Sidebar />
+                <Post />
+              </div>
+            }
+          ></Route>
+          <Route path="/about" element={<AboutUsPage />} />
+        </Routes>
       </div>
-    );
-  }
-  
-  export default App;
+    </Router>
+  );
+}
+
+export default App;
