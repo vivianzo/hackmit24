@@ -1,9 +1,9 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Post from "./components/post";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import AboutUsPage from "./AboutUsPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Response from "./Response";
+import Sidebar from "./Sidebar";
+import ChatPage from "./components/chatComponent";
+import Post from "./components/post";
 import SearchBar from "./components/searchbar";
 
 function App() {
@@ -39,7 +39,14 @@ function App() {
               </div>
             }
           />
-          <Route path="/response-page" element={<Response />} />
+          <Route path="/response-page" element={
+            <div className="flex">
+            <Sidebar />
+            <div className="ml-64 w-full">
+               <ChatPage /> 
+            </div>
+          </div>
+          } />
         </Routes>
       </div>
     </Router>
