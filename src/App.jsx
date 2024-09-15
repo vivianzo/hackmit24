@@ -14,11 +14,20 @@ function App() {
             element={
               <div className="flex">
                 <Sidebar />
-                <Post />
+                <div className="flex-grow ml-64 flex justify-center">
+                  <Post />
+                </div>
               </div>
             }
           ></Route>
-          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/about" element={
+            <div className="flex"> 
+                <Sidebar/>
+                    <div className="ml-64">
+                <AboutUsPage />
+                </div>
+            </div>
+          }/>
         </Routes>
       </div>
     </Router>
