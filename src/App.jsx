@@ -21,10 +21,23 @@ function App() {
                     <div className="ml-[200px] flex items-center">
                         <SearchBar />
                     </div>
-                    <div className="flex-grow flex justify-center items-start">
+                    <div className="flex-grow flex flex-wrap justify-center items-start">
+                      <Post
+                        title="Crutches for sale"
+                        text="I have crutches, and I am looking to sell them at a discounted price! Please contact me for more info!"
+                      />
+          
+                      <Post
+                        title="I need help!"
+                        text="I need help! I'm not sure where my nearest hospital is, and I'm looking for advice!"
+                      />
+                      
                       <Post
                         title="Wheelchair for sale"
                         text="I am selling a wheelchair at discount! Please contact me for more details!"
+                        imgURL={
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT88LsIi8VN9SrUe7Xx9nS-xaRRS_P5gofpKw&s"
+                        }
                       />
                       <Post
                         title="I need crutches!"
