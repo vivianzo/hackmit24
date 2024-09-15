@@ -1,6 +1,6 @@
 import React from "react";
-import "./post.css";
 import { Link } from "react-router-dom";
+import "./post.css";
 
 const post = ({ title, text }) => {
   return (
