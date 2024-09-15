@@ -1,40 +1,25 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react';
+import data from './CONSTANTS.json'; 
 
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [data, setData] = useState([]);  
-  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');  // Manage the search term state
 
-  useEffect(() => {
-    //ADD API
-    fetch('https://api.example.com/medical-equipment')
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);  
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      });
-  }, []); 
-
+  // Filter the data based on the search term
   const filteredData = data.filter((item) => {
     const searchTermLower = searchTerm.toLowerCase();
     const nameLower = item.name.toLowerCase();
     return searchTerm && nameLower.startsWith(searchTermLower);
-  }).slice(0, 10);
+  }).slice(0, 10);  // Limit the results to 10
 
-
+  // Handle input changes
   const handleInputChange = (event) => {
-      setSearchTerm(event.target.value);
+    setSearchTerm(event.target.value);
   };
+
+  // Handle search selection
   const handleSearch = (item) => {
     alert(`You selected ${item.name}`);
   };
-  if (loading) {
-    return <p>Loading data...</p>; 
-  }
 
   return (
     <div>
@@ -56,7 +41,7 @@ const SearchBar = () => {
             </div>
           ))
         ) : (
-          <p>No results found</p> 
+          <p>No results found</p>
         )}
       </div>
     </div>
