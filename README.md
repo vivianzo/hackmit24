@@ -1,9 +1,24 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Healthcare Equipment Sharing Platform Frontend
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# hackmit24
+This project is the **frontend** for a platform designed to enable cost-effective sharing of healthcare equipment and services. Built with a focus on **user-friendly navigation** and **intuitive design**, the platform aims to improve usability and accessibility for its target audience.
+
+---
+
+## Features
+
+- **React-based Frontend**: Built using **React** and **Vite** for fast development and efficient builds.
+- **Intuitive Navigation**: Emphasis on a clean and user-centric interface to enhance usability.
+- **Scalable Design**: Structured to easily integrate with a backend when required.
+- **Component-Based Architecture**: Reusable components for modular and maintainable code.
+
+---
+
+## Technologies Used
+
+- **React**: For building the user interface.
+- **Vite**: As the build tool and development environment.
+- **CSS**: For styling and layout.
